@@ -21,6 +21,12 @@ interface navbarProps {
 const Navbar: React.FC<navbarProps>= () => {
     const router = useRouter();
 
+    const handleClick = () => {
+        router.push("/blog")
+    }
+    
+
+
     return ( 
         <div className="flex flex-col   w-full p-2">
             <div className=" xl:mx-36 mx-0 p-3 flex flex-row items-center justify-between">
@@ -31,8 +37,8 @@ const Navbar: React.FC<navbarProps>= () => {
 
                 <div className=" flex-row   flex ">
                     <ul className="flex flex-row gap-2 font-extrabold">
+                        <button onClick={handleClick}>Blog</button>
                         
-                        <li>Blog</li>
                         
                     </ul>
                 </div>
