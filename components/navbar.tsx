@@ -1,3 +1,5 @@
+"use client";
+
 import { ModeToggle } from "@/components/mode-toggle";
 import { ChevronRightSquare } from 'lucide-react';
 import {
@@ -8,6 +10,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
+import { useRouter } from "next/navigation";
   
 
 interface navbarProps {
@@ -16,6 +19,8 @@ interface navbarProps {
 
 
 const Navbar: React.FC<navbarProps>= () => {
+    const router = useRouter();
+
     return ( 
         <div className="flex flex-col   w-full p-2">
             <div className=" xl:mx-36 mx-0 p-3 flex flex-row items-center justify-between">
@@ -24,15 +29,15 @@ const Navbar: React.FC<navbarProps>= () => {
                     <ModeToggle/>
                 </div>
 
-                <div className=" flex-row  hidden sm:flex ">
+                <div className=" flex-row   flex ">
                     <ul className="flex flex-row gap-2 font-extrabold">
-                        <li>Projects</li>
+                        
                         <li>Blog</li>
-                        <li>Contact</li>
+                        
                     </ul>
                 </div>
 
-                <div className="sm:hidden">
+                {/* <div className="sm:hidden">
                     <DropdownMenu>
                         <DropdownMenuTrigger>
                             <ChevronRightSquare className="text-2xl"/>
@@ -46,13 +51,12 @@ const Navbar: React.FC<navbarProps>= () => {
                                 <button>Blog</button>
                             </DropdownMenuItem>
                             <DropdownMenuSeparator/>
-                            <DropdownMenuItem>
-                                <button>Contact</button>
-                            </DropdownMenuItem>
+                            
                             
                         </DropdownMenuContent>
                     </DropdownMenu>
-                </div>
+                </div> */}
+
             </div>
 
         </div>

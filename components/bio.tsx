@@ -18,8 +18,10 @@ const Bio: React.FC<bioProps> = () => {
 
         <p className="text-[#8c9a94] pt-3">This blog will serve as a home for all my thoughts, projects, notes and experiences, ranging from programming to math, machine learning, web development and more. </p>
         <span className="flex gap-2">
-          <Twitter/>
-          <Github/>
+          <a className='transform hover:scale-150 transition-transform' href="https://twitter.com/KshtjBhardwaj18"><Twitter/></a>
+          <a className='transform hover:scale-150 transition-transform'  href="https://github.com/KshitijBhardwaj18/"><Github/></a>
+          
+          
         </span>
       </div>
      );
