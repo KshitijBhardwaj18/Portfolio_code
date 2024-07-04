@@ -5,26 +5,63 @@ interface selectedWorkProps {}
 const SelectedWork: React.FC<selectedWorkProps> = () => {
   const Works = [
     {
-      title: "Ecommerce CMS dashboard",
+      title: `Cases (lets You create custumised cases) `,
       description:
-        "The ECommerce CMS Dashboard is a sleek and efficient web application, meticulously crafted with Next.js, Tailwind CSS, Prisma, Stripe, and PostgreSQL. This dashboard empowers online store administrators with a user-friendly interface for seamless product management, order tracking, and customer engagement. The integration of Stripe ensures secure online transactions, while analytics and reporting tools provide valuable insights. With a focus on security and scalability, this dashboard is the perfect solution for businesses seeking a modern and robust eCommerce management system.",
-      image: "/ecommerce-thumbnail.png",
+        "Harnessing the power of PostgreSQL, Prisma, Next.js, Tailwind CSS, and Stripe, my SaaS application redefines personalized device protection. With robust database management, seamless server-side rendering, responsive design, and secure payment integration, we empower users to create custom cases effortlessly and order them.This showcases  my ability to handle a production size codebase and integerate payments seemlessly",
+        src:"/videos/cases.mp4",
       github:"https://github.com/KshitijBhardwaj18/Store-admin",
-      deployment:"https://store-admin1819.vercel.app/",
+      deployment:"https://github.com/KshitijBhardwaj18/Cases",
+      tags: ["Next.js", ]
     },
+    {
+      title: "ECOMMERCE ADMIN (Lets you create stores)",
+      description:
+        "A fullstack sass that let you create ecom store out of nowhere.Lets you add products, create categories, all standard ecom features, accept payments, overview total sales of all store in one place. ",
+      src: "/videos/ecom.mp4",
+      github:"https://github.com/KshitijBhardwaj18/Store-admin",
+      github2:"https://github.com/KshitijBhardwaj18/Ecommerce-store",
+      tags: ["Next.js", ]
+
+    },
+
+    {
+      title: "Yoom (Lets you do online meetings)",
+      description:
+        "A fullstack vedio meeting platform made using nextjs, taiwind css, stream api. Lets you create rooms, share meet links, record meetings and have all standard video conferencing features. ",
+      src: "/videos/yoom.mp4",
+      github:"https://github.com/KshitijBhardwaj18/zoom",
+      deployment:"https://zoom-kshitijbhardwaj.vercel.app/",
+      tags: ["Next.js", ]
+
+    },
+    
+
+
+    {
+      title: "Youtube UI",
+      description:
+        "A youtube ui clone made in with ract, tailwind css and rapid api. It shows my capbilties in creating realworld UI/UX using react.",
+      src: "/videos/youtube.mp4",
+      github:"https://github.com/KshitijBhardwaj18/yt-clone",
+      deployment:"https://youtubecloneby-kshitij.netlify.app/",
+  
+      tags: ["Next.js", ]
+
+    }
   ];
 
   return (
-    <div className="max-w-[803px] mx-auto p-5 flex flex-col gap-2">
-      <h1 className="text-2xl font-extrabold">Selected Work</h1>
+    <div className="max-w-[900px] mx-auto  flex flex-col mt-4 ">
+      <h1 className="text-4xl font-extrabold">Selected Work</h1>
       {Works.map((work) => (
         <ProjectCard
-          key={work.image}
+          key={work.src}
           title={work.title}
           description={work.description}
-          image={work.image}
+          src={work.src}
           deployment={work.deployment}
           github={work.github}
+          github2={work.github2}
 
           />
       ))}
